@@ -67,7 +67,10 @@ jobs:
   information:
     runs-on: ubuntu-latest
     steps:
+        environment: development
       - name: Get code
         uses: actions/checkout@v3
       - name: Run custom js action
         uses: ./.github/actions/deploy-to-s3-js
+        with:
+          api-key: ${{secrets.apikey}}

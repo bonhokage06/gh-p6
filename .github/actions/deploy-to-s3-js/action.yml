@@ -1,5 +1,10 @@
 name: "Deploy to s3"
 description: "custom script to desploy to s3"
+inputs:
+  api-key:
+    description: "api-key"
+    required: true
+    default: ""
 runs:
   using: "node16"
   main: "main.js"
