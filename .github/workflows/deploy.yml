@@ -65,9 +65,9 @@ jobs:
       - name: Deploy site
         run: echo "Deploying..."
   information:
+    environment: development
     runs-on: ubuntu-latest
     steps:
-        environment: development
       - name: Get code
         uses: actions/checkout@v3
       - name: Run custom js action
